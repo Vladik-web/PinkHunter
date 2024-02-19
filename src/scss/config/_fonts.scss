@@ -1,0 +1,10 @@
+@use '../utils/mixins';
+
+@include mixins.font-face(Montserrat, Montserrat/Montserrat-Regular, 400);
+@include mixins.font-face(Montserrat, Montserrat/Montserrat-Medium, 500);
+@include mixins.font-face(Montserrat, Montserrat/Montserrat-Semibold, 600);
+@include mixins.font-face(Montserrat, Montserrat/Montserrat-Bold, 700);
+
+/*  */
+@include mixins.font-face(Evolventa, Evolventa/Evolventa-Regular, 400);
+@include mixins.font-face(Evolventa, Evolventa/Evolventa-Bold, 700);

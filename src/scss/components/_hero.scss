@@ -1,0 +1,63 @@
+@use '../utils/functions' as function;
+
+.hero {
+  min-height: 100svh;
+
+  &__cone {
+    position: absolute;
+    left: 50%;
+    top: function.rem(-15);
+    transform: translateX(-50%);
+  }
+
+  &__inner {
+    position: relative;
+    z-index: var(--ui-index-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: function.rem(252) 0;
+    min-height: 100svh;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: function.rem(30);
+    gap: function.rem(10);
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: clamp(3.75rem, 1.75rem + 10vw, 13.75rem);
+    line-height: 0.72727;
+    text-align: center;
+    text-transform: uppercase;
+
+    &--pink {
+      color: var(--accent);
+    }
+  }
+
+  &__description {
+    margin-bottom: function.rem(45);
+    max-width: function.rem(645);
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+    line-height: 1.4;
+    text-align: center;
+
+    b {
+      display: block;
+      font-family: var(--secondary-font-family);
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    min-width: function.rem(414);
+  }
+}

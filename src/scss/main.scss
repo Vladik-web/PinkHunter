@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// libs
+@use 'config/vendors';
+
+// variables
+@use 'variables';
+
+// fonts
+@use 'config/fonts';
+
+// settings
+@use 'config/settings';
+
+// layouts
+@use 'layouts';
+
+// components
+@use 'components';

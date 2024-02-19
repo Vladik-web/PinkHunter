@@ -1,0 +1,47 @@
+@use '../../utils/mixins' as mixin;
+@use '../../utils/functions' as function;
+
+.checkbox {
+  --width: #{function.rem(20)};
+  --height: #{function.rem(20)};
+  --bg-color: #f3f2f1;
+  --b-radius: #{function.rem(5)};
+  --bg-active: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.20078 1.59961L3.42777 6.39961L1.80078 4.76342' stroke='%231A2A49' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  --outline: #f00000;
+
+  display: block;
+  width: fit-content;
+  cursor: pointer;
+
+  &__input {
+    display: block;
+    width: 0;
+    height: 0;
+
+    &:checked {
+      + .checkbox__mark::before {
+        background: var(--bg-color) var(--bg-active) no-repeat center / cover;
+        background-size: 10px;
+      }
+    }
+
+    &:focus-visible {
+      + .checkbox__mark::before {
+        outline: 2px solid var(--outline);
+      }
+    }
+  }
+
+  &__mark {
+    @include mixin.flex-v-center;
+
+    &::before {
+      content: '';
+      display: block;
+      border-radius: var(--b-radius);
+      width: var(--width);
+      height: var(--height);
+      background-color: var(--bg-color);
+    }
+  }
+}

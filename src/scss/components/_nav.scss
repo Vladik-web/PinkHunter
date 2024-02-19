@@ -1,0 +1,19 @@
+@use '../utils/mixins' as mixin;
+@use '../utils/functions' as function;
+
+.nav {
+  &__list {
+    @include mixin.flex-v-center;
+
+    gap: function.rem(50);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    @include mixin.hover {
+      color: var(--accent);
+    }
+  }
+}

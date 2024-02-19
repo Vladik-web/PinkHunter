@@ -1,0 +1,35 @@
+@use '../../utils/functions' as function;
+@use '../../utils/mixins' as mixin;
+
+.button {
+  border: function.rem(1) solid var(--accent);
+  border-radius: function.rem(100);
+  padding: function.rem(24) function.rem(18);
+  width: fit-content;
+  min-height: function.rem(70);
+  font-size: function.rem(18);
+  color: var(--white);
+
+  &:not(:disabled) {
+    @include mixin.hover {
+      background-color: var(--accent);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: function.rem(2) solid #0f62fe;
+    outline-offset: function.rem(2);
+  }
+
+  &:disabled {
+  }
+
+  &--big {
+    padding: function.rem(20);
+    font-size: function.rem(24);
+  }
+}

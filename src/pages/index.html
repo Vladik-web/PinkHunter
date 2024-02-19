@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    @@include('../components/_head.html', {title: 'Главная'})
+    <meta name="description" content="content" />
+  </head>
+  <body>
+    <div class="base-layout">
+      @@include('../components/_header.html')
+
+      <main class="main">
+        <section class="hero">
+          <img class="hero__cone hero__cone--1" src="img/static/cone-1.png" alt="" />
+
+          <div class="hero__container container">
+            <div class="hero__inner">
+              <h1 class="hero__title">
+                <span class="hero__text hero__text--pink">Pink</span>
+                <span class="hero__text">Hunter</span>
+              </h1>
+              <p class="hero__description">
+                Подбор талантов, которые делают результаты. Наши кандидаты - залог вашего успеха в
+                мире
+                <b>Affiliate marketing</b>
+              </p>
+
+              <button class="hero__button button button--big">OWNER</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @@include('../components/_footer.html')
+    </div>
+
+    @@include('../components/modals/_modal-template.html')
+  </body>
+</html>

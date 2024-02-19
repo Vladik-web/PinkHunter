@@ -1,0 +1,26 @@
+@use 'sass:math';
+@use 'utils/functions';
+
+:root {
+  --primary-font-family: 'Montserrat', sans-serif;
+  --secondary-font-family: 'Evolventa', sans-serif;
+
+  // main
+  --app-height: 100svh;
+
+  // ui-z-index
+  --ui-index-1: 1; //Для наползающих элементов в общем потоке
+  --ui-index-2: 2; //Для наползающих элементов в общем потоке
+  --ui-index-3: 3; //Для масок
+  --ui-index-4: 4; //Для сайдбаров
+  --ui-index-5: 5; //Для модалок
+  --ui-index-6: 6; //Для элементов перекрывающих все
+
+  //sizes
+
+  // colors
+
+  --accent: #db00f9;
+  --white: #fff;
+  --black: #000;
+}

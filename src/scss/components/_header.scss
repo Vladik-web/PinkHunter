@@ -1,0 +1,26 @@
+@use '../utils/functions' as function;
+@use '../utils/mixins' as mixin;
+
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  &__inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    padding: function.rem(50) 0 0;
+    gap: function.rem(30);
+  }
+
+  &__logo {
+    display: inline-block;
+    width: function.rem(190);
+  }
+
+  &__button {
+    margin-left: auto;
+  }
+}
